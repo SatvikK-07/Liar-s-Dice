@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://satvikk-07.github.io/Liar-s-Dice/",
+  "homepage": "https://satvikK-07.github.io/Liar-s-Dice/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
