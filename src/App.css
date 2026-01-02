@@ -494,6 +494,7 @@ h2 {
   display: flex;
   gap: 10px;
   justify-content: flex-start;
+  margin-top: 12px;
 }
 
 .bidding .bid-layout {
@@ -757,12 +758,13 @@ button:hover:not(:disabled) {
 .result-banner {
   background: linear-gradient(90deg, #ffe3c4, #ffd0a2);
   border-radius: 14px;
-  padding: 12px;
+  padding: 12px 12px 18px;
   border: 1px solid var(--border);
   display: flex;
   align-items: center;
   gap: 12px;
   margin-top: 14px;
+  flex-wrap: wrap;
 }
 
 .big-call {
@@ -817,6 +819,23 @@ button:hover:not(:disabled) {
   line-height: 1.6;
 }
 
+.modal.celebrate {
+  max-width: 520px;
+  padding: 22px;
+  text-align: center;
+  background: linear-gradient(135deg, #fff3d8, #ffe4bd);
+  border: 1px solid var(--border);
+  box-shadow: 0 24px 60px rgba(148, 92, 46, 0.25);
+}
+
+.celebrate-body h2 {
+  margin: 0 0 10px;
+  color: #2b170d;
+}
+
+.celebrate-body p {
+  margin: 0 0 16px;
+}
 .modal-body h4 {
   margin: 14px 0 6px;
 }

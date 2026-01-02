@@ -708,7 +708,7 @@ const countMatchesInList = (list, pip) =>
                     <span className="count">{player.diceCount} dice</span>
                   </div>
                   <div className="reveal-body center-dice">
-                    {phase === 'showdown' || phase === 'round-end' || phase === 'game-over' ? null : (
+      {phase === 'showdown' || phase === 'round-end' || phase === 'game-over' ? null : (
                       <Cup color={player.color} slam showAllDice={showAllDice} muted={player.diceCount === 0} />
                     )}
                     <div className="dice-strip centered">
@@ -750,7 +750,7 @@ const countMatchesInList = (list, pip) =>
                   Next Round
                 </button>
                 <button className="ghost" onClick={handleRestart}>
-                  Back to Lobby
+                  Restart
                 </button>
               </>
             )}
@@ -815,6 +815,25 @@ const countMatchesInList = (list, pip) =>
                 <li>Dice never refresh until a rematch. At 0 dice you’re out and skipped.</li>
                 <li>Game ends immediately when only one player has dice.</li>
               </ul>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {resolutionInfo?.winner && (
+        <div className="modal-backdrop" onClick={() => setResolutionInfo(null)}>
+          <div className="modal celebrate" onClick={(e) => e.stopPropagation()}>
+            <div className="modal-body celebrate-body">
+              <h2>🏆 {resolutionInfo.winner.name} Wins!</h2>
+              <p>Last player standing with dice. Start a rematch or head back to lobby.</p>
+              <div className="button-row">
+                <button className="primary" onClick={handleRestart}>
+                  Restart
+                </button>
+                <button className="ghost" onClick={() => handleNextRound(true)}>
+                  Rematch (same players)
+                </button>
+              </div>
             </div>
           </div>
         </div>
